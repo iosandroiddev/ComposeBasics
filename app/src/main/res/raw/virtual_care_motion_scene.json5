@@ -1,0 +1,101 @@
+{
+  ConstraintSets: {
+
+    start: {
+      data_content: {
+        start: ['parent', 'start'],
+        end: ['parent', 'end'],
+        top: ['parent', 'top'],
+      },
+
+      logo:{
+        end: ['parent', 'end', 20],
+        top: ['box', 'top'],
+        bottom: ['box', 'bottom', 20],
+        scaleY: 1,
+        scaleX: 1
+      },
+
+      title: {
+        start: ['parent', 'start', 20],
+        top: ['logo', 'top'],
+        bottom: ['logo', 'bottom', ],
+        custom: {
+          fontSize: 24,
+          fontWeight: 500
+        }
+      },
+
+      box: {
+        width: 'spread',
+        height: 238,
+        start: ['parent', 'start'],
+        end: ['parent', 'end'],
+        top: ['parent', 'top'],
+        custom: {
+          roundValue: 50
+        }
+      },
+    },
+
+    end: {
+
+      logo:{
+        end: ['parent', 'end', 20],
+        top: ['box', 'top'],
+        bottom: ['box', 'bottom'],
+        scaleY: 0.7,
+        scaleX: 0.7
+      },
+
+      box: {
+        width: 'spread',
+        start: ['parent', 'start'],
+        end: ['parent', 'end'],
+        top: ['parent', 'top'],
+        bottom: ['data_content', 'top',],
+        height: 96,
+        custom: {
+          roundValue: 0
+        }
+      },
+
+      data_content: {
+        height: 'spread',
+        start: ['parent', 'start'],
+        end: ['parent', 'end'],
+        top: ['box', 'bottom'],
+        bottom: ['parent', 'bottom', 20],
+      },
+
+      title: {
+        start: ['parent', 'start', 20],
+        top: ['logo', 'top'],
+        bottom: ['logo', 'bottom', ],
+        custom: {
+          fontSize: 20,
+          fontWeight: 400
+        }
+      }
+    }
+  },
+
+  Transitions: {
+    default: {
+      from: 'start',
+      to: 'end',
+      pathMotionArc: 'startVertical',
+      KeyFrames: {
+        KeyAttributes: [
+          {
+            target: ['data_content'],
+//            frames: [0, 5, 10, 20, 25, 100],
+//            translationY: [0, 150, 100, 100, 150, 0],
+            frames: [0, 5, 10, 20, 25, 50, 75, 100],
+            translationY: [0, 150, 180, 100, 100, 180, 150, 0]
+          }
+        ]
+      },
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  ConstraintSets: {
+    start: {
+      data_content: {
+        width: 'spread',
+        height: 'spread',
+        start: ['parent', 'start'],
+        end: ['parent', 'end'],
+        top: ['box', 'bottom'],
+        bottom: ['box', 'bottom']
+      },
+      box: {
+        width: 'spread',
+        start: ['parent', 'start'],
+        end: ['parent', 'end'],
+        top: ['parent', 'top'],
+        custom: {
+          roundValue: 50
+        }
+      },
+      logo: {
+        end: ['parent', 'end'],
+        top: ['parent', 'top'],
+      }
+    }
+  }
+}
