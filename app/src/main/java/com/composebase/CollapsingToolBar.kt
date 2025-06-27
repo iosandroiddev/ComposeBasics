@@ -150,8 +150,8 @@ fun MainContent(lazyListState: LazyListState) {
             NumberHolder(number = it)
             Spacer(
                 modifier = Modifier
-                    .height(12.dp)
-                    .background(color = Color.DarkGray)
+                    .height(20.dp)
+                    .background(color = Color.Black)
             )
         }
     }
