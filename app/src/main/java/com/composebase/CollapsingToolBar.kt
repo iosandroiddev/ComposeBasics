@@ -70,7 +70,7 @@ fun TopBar(lazyListState: LazyListState) {
                         Color(0xFF015990), Color(0xFF209AD6)
                     )
                 ), shape = RoundedCornerShape(
-                    bottomEnd = 50.dp, bottomStart = 50.dp
+                    bottomEnd = 100.dp, bottomStart = 100.dp
                 )
             )
             .animateContentSize(animationSpec = tween(durationMillis = 500))
@@ -86,7 +86,7 @@ fun TopBar(lazyListState: LazyListState) {
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
                 Text(
-                    text = "Invisalign \n" + "Virtual Care",
+                    text = "Invisalign \n"
                     fontWeight = FontWeight.Bold,
                     fontSize = 24.sp,
                     color = Color.White
